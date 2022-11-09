@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 type ReposType = {
   full_name: string;
@@ -9,9 +10,8 @@ function App() {
   const [respos, setRepos] = useState<ReposType[]>([])
 
   useEffect(() => {
-    fetch(`https://api.github.com/users/rianvitor26/repos`)
-      .then(res => res.json())
-      .then(data => setRepos(data))
+    axios.get(`https://api.github.com/users/rianvitor26/repos`)
+      .then(response => setRepos(response.data))
   }, [])
 
   return (
