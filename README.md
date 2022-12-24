@@ -1,2 +1,2 @@
-# Consumo-API-REST-ReactQuery
-Consumo de APIs RESTful no React da maneira certa - Decode #009
+# Consumo-API-REST
+Consumo de API REST de diferentes maneiras, como: axios, hook próprio e react-query
